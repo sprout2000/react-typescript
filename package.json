@@ -20,7 +20,7 @@
     "@testing-library"
   ],
   "scripts": {
-    "dev": "run-p test start",
+    "dev": "run-p test:watch start",
     "start": "cross-env NODE_ENV=\"development\" webpack serve",
     "build": "cross-env NODE_ENV=\"production\" webpack --progress",
     "test": "jest",
