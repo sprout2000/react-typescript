@@ -1,13 +1,15 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { App } from '../src/App';
 
 describe('App component', () => {
   test('render App component', () => {
-    const { getByText } = render(<App />);
+    render(<App />);
 
-    expect(getByText(/Edit/)).toBeInTheDocument();
+    expect(screen.getByText(/Learn React/)).toBeInTheDocument();
+    userEvent.click(screen.getByRole(/link/));
   });
 });
