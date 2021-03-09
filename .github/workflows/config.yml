@@ -1,9 +1,7 @@
 name: GitHub CI
 
-on:
-  push:
-    tags:
-      - v*
+on: [push]
+
 jobs:
   test:
     runs-on: macos-10.15
@@ -15,6 +13,6 @@ jobs:
         with:
           node-version: '14.x'
       - name: Install
-        run: npm install
+        run: yarn install --ignore-optional --frozen-lockfile
       - name: Test
-        run: npm test
+        run: yarn test
