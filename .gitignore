@@ -2,6 +2,5 @@ node_modules
 public
 .env
 .DS_Store
-yarn.lock
 yarn-*.log
 package-lock.json
