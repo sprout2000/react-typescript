@@ -4,6 +4,7 @@
   "version": "0.1.1",
   "license": "MIT",
   "author": "sprout2000",
+  "homepage": "https://sprout2000.github.io/react-typescript",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/sprout2000/react-typescript.git"
