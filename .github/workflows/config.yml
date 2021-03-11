@@ -4,9 +4,8 @@ on:
   push:
     tags:
       - v*
-
 jobs:
-  test:
+  build:
     runs-on: macos-10.15
     steps:
       - uses: actions/checkout@master
@@ -22,7 +21,7 @@ jobs:
       - name: Build
         run: yarn build
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
